@@ -29,7 +29,7 @@ app.get('/', (req, res, next) => {
 });
 
 //init db
-require('./dbs/init.mongodb.lv0')
+require('./dbs/init.mongodb')
 
 
 //init routes
