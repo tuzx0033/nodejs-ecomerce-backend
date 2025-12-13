@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "compression": "^1.8.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
   },
   "devDependencies": {
     "helmet": "^8.1.0",
