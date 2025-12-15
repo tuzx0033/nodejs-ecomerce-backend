@@ -1,10 +1,14 @@
 'use strict'
 
 const mongoose = require('mongoose')
+const {db: {host, name, port}} = require('../configs/config.mongodb')
+// Sửa connection string: thêm prefix mongodb:// và sử dụng port từ config
+const connectString = `mongodb://${host}:${port}/${name}`
 
-const connectString = 'mongodb://localhost:27017/shopDEV1'
+const {countConnect} = require('../helpers/check.connect') 
 
-const {countConnect} = require('../helpers/check.connect')
+
+console.log(`connectionString:`, connectString)
 
 class Database {
     constructor() {
@@ -23,7 +27,10 @@ class Database {
                 maxPoolSize: 50
         } 
         ).then(_ => console.log('connected mongodb success PRO'))
-        .catch(err => console.log('error connect'))
+        .catch(err => {
+            console.error('❌ Error connecting to MongoDB:', err.message)
+            console.error('Connection string:', connectString)
+        })
     }
 
 

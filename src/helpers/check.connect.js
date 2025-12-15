@@ -36,13 +36,6 @@ const checkOverload  = () =>{
 }
 
 
-const checkOverload1 = () => {
-    setInterval(() => {
-
-    }, _SECONDs1)
-
-}
-
 module.exports = {
     countConnect, checkOverload
 }
