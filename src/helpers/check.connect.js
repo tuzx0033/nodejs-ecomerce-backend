@@ -7,6 +7,7 @@ const process = require('process')
 
 
 const _SECONDs = 5000
+const _SECONDs1 = 2000
 
 
 
@@ -35,6 +36,12 @@ const checkOverload  = () =>{
 }
 
 
+const checkOverload1 = () => {
+    setInterval(() => {
+
+    }, _SECONDs1)
+
+}
 
 module.exports = {
     countConnect, checkOverload
